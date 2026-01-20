@@ -245,5 +245,3 @@ export function getAllTags(): string[] {
 export function getProjects() {
   return projects;
 }
-
-export default getProjects;
