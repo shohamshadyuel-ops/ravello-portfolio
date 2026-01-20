@@ -1,0 +1,322 @@
+{
+  "nav": {
+    "home": "Home",
+    "work": "Work",
+    "about": "About",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "home": {
+    "title": "Custom CRM Systems",
+    "subtitle": "Built for your business workflow. Fully tailored platforms with automation and integrations.",
+    "ctaQuote": "Request a Quote",
+    "ctaWork": "View Work",
+    "stats": {
+      "deliveryTime": "Delivery Time",
+      "customBuilt": "Custom Built",
+      "powered": "Powered"
+    },
+    "sections": {
+      "everything": "Everything You Need",
+      "inOneSystem": "In One System",
+      "everythingDesc": "Build a complete business management platform tailored to your needs",
+      "featured": "Featured",
+      "projects": "Projects",
+      "featuredDesc": "Real CRM systems built for real businesses",
+      "howWeBuild": "How We Build",
+      "yourCRM": "Your CRM",
+      "howWeBuildDesc": "A proven process from concept to deployment",
+      "whyChoose": "Why Choose",
+      "custom": "Custom?",
+      "whyChooseDesc": "Stop adapting your business to software limitations"
+    },
+    "modules": {
+      "customDataModels": "Custom Data Models",
+      "customDataModelsDesc": "Tailored database structures that match your exact business logic",
+      "workflowAutomation": "Workflow Automation",
+      "workflowAutomationDesc": "Automate repetitive tasks and create intelligent workflow sequences",
+      "analyticsReporting": "Analytics & Reporting",
+      "analyticsReportingDesc": "Real-time dashboards and custom reports for data-driven decisions",
+      "roleBasedAccess": "Role-Based Access",
+      "roleBasedAccessDesc": "Granular permissions and user management for team collaboration",
+      "apiIntegrations": "API Integrations",
+      "apiIntegrationsDesc": "Connect with WhatsApp, Email, Payment systems, and third-party tools",
+      "enterpriseSecurity": "Enterprise Security",
+      "enterpriseSecurityDesc": "Bank-level security with encryption, backups, and compliance"
+    },
+    "modulesList": [
+      {
+        "title": "Custom Data Models",
+        "description": "Tailored database structures that match your exact business logic"
+      },
+      {
+        "title": "Workflow Automation",
+        "description": "Automate repetitive tasks and create intelligent workflow sequences"
+      },
+      {
+        "title": "Analytics & Reporting",
+        "description": "Real-time dashboards and custom reports for data-driven decisions"
+      },
+      {
+        "title": "Role-Based Access",
+        "description": "Granular permissions and user management for team collaboration"
+      },
+      {
+        "title": "API Integrations",
+        "description": "Connect with WhatsApp, Email, Payment systems, and third-party tools"
+      },
+      {
+        "title": "Enterprise Security",
+        "description": "Bank-level security with encryption, backups, and compliance"
+      }
+    ],
+    "process": {
+      "discovery": "Discovery & Planning",
+      "discoveryDesc": "We analyze your workflow, pain points, and business requirements",
+      "systemDesign": "System Design",
+      "systemDesignDesc": "Creating data models, workflows, and integration architecture",
+      "development": "Development",
+      "developmentDesc": "Building your custom CRM with regular check-ins and iterations",
+      "testing": "Testing & Training",
+      "testingDesc": "Quality assurance, team training, and documentation",
+      "launch": "Launch & Support",
+      "launchDesc": "Smooth deployment with ongoing maintenance and optimization"
+    },
+    "processSteps": [
+      {
+        "number": "01",
+        "title": "Discovery & Planning",
+        "description": "We analyze your workflow, pain points, and business requirements"
+      },
+      {
+        "number": "02",
+        "title": "System Design",
+        "description": "Creating data models, workflows, and integration architecture"
+      },
+      {
+        "number": "03",
+        "title": "Development",
+        "description": "Building your custom CRM with regular check-ins and iterations"
+      },
+      {
+        "number": "04",
+        "title": "Testing & Training",
+        "description": "Quality assurance, team training, and documentation"
+      },
+      {
+        "number": "05",
+        "title": "Launch & Support",
+        "description": "Smooth deployment with ongoing maintenance and optimization"
+      }
+    ],
+    "benefits": {
+      "noFees": "No monthly per-user fees - you own the system",
+      "builtForYou": "Built exactly for your workflow, not generic templates",
+      "unlimitedCustom": "Unlimited customization as your business evolves",
+      "dataOwnership": "Complete data ownership and control",
+      "integrations": "Integrates with your existing tools",
+      "scales": "Scales with your business growth"
+    },
+    "benefitsList": [
+      "No monthly per-user fees - you own the system",
+      "Built exactly for your workflow, not generic templates",
+      "Unlimited customization as your business evolves",
+      "Complete data ownership and control",
+      "Integrates with your existing tools",
+      "Scales with your business growth"
+    ]
+  },
+  "work": {
+    "title": "Project",
+    "portfolio": "Portfolio",
+    "subtitle": "Custom CRM systems we've built for businesses across different industries",
+    "noProjects": "No projects found for this filter.",
+    "all": "All"
+  },
+  "about": {
+    "title": "About",
+    "studio": "Ravello Studio",
+    "subtitle": "Custom CRM systems built with Base44. Workflow-driven. Business-focused.",
+    "bio": {
+      "p1": "specializes in building custom CRM systems powered by Base44—fully tailored platforms that transform how businesses manage workflows, automate processes, and drive growth.",
+      "p2": "We don't believe in one-size-fits-all solutions. Every business has unique processes, and your software should reflect that. That's why we build fully custom CRM systems from the ground up—tailored to your exact workflow, integrated with your existing tools, and designed to scale with your growth.",
+      "p3": "From real estate agencies to e-commerce operations, healthcare clinics to logistics companies, we've helped businesses across industries streamline their operations with custom-built systems. Our approach combines technical expertise with a deep understanding of business operations, ensuring that every feature adds real value and drives measurable outcomes.",
+      "p4": "We deliver fast—from simple setups in 3 days to complex enterprise systems in 4 weeks. Every system features clean, luxury UI design, intelligent automations, seamless integrations, and workflow-driven architecture that puts your business processes first."
+    },
+    "skills": {
+      "title": "Core Skills",
+      "fullStack": "Full-Stack Development",
+      "database": "Database Design",
+      "workflow": "Workflow Automation",
+      "cloud": "Cloud Infrastructure",
+      "api": "API Integrations",
+      "security": "Security & Compliance",
+      "expert": "Expert",
+      "advanced": "Advanced"
+    },
+    "values": {
+      "title": "Our Values",
+      "valuesTitle": "Our Values",
+      "businessFirst": "Business-First Approach",
+      "businessFirstDesc": "Technology serves your business goals, not the other way around. Every feature is designed with ROI in mind.",
+      "clientSuccess": "Client Success",
+      "clientSuccessDesc": "Your success is our success. We're invested in building systems that truly transform your operations.",
+      "speed": "Speed & Efficiency",
+      "speedDesc": "Fast turnaround times without compromising quality. Get your CRM live in weeks, not months.",
+      "security": "Security & Reliability",
+      "securityDesc": "Enterprise-grade security, regular backups, and 99.9% uptime. Your data is always protected."
+    },
+    "techStack": {
+      "title": "Technology Stack",
+      "technology": "Technology",
+      "subtitle": "Modern, battle-tested technologies for reliable and scalable systems"
+    }
+  },
+  "pricing": {
+    "title": "Flexible",
+    "pricing": "Pricing",
+    "subtitle": "Built with Base44 • Delivered in 3 days to 4 weeks • No subscriptions, no per-user fees.",
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "description": "For small businesses that need simple lead tracking and basic automation",
+        "estimate": "Starting from ₪2,200",
+        "features": {
+          "leads": "Leads & contacts management",
+          "pipeline": "Status pipeline",
+          "notes": "Notes & follow-ups",
+          "email": "Email integration only",
+          "automations": "Basic automations",
+          "dashboard": "Admin dashboard",
+          "delivery": "Delivery time: 3–7 days"
+        }
+      },
+      "growth": {
+        "name": "Growth",
+        "description": "For growing businesses that need automation, structure, and integrations",
+        "estimate": "Starting from ₪5,500",
+        "popular": "Most Popular",
+        "features": {
+          "everything": "Everything in Starter",
+          "pipelines": "Advanced pipelines & stages",
+          "followups": "Automated follow-ups & reminders",
+          "tasks": "Task management",
+          "roles": "User roles & permissions",
+          "dashboards": "Dashboards & reporting",
+          "integrations": "WhatsApp + Email integration",
+          "delivery": "Delivery time: 1–3 weeks"
+        }
+      },
+      "advanced": {
+        "name": "Advanced",
+        "description": "For complex businesses that need custom workflows and advanced integrations",
+        "estimate": "Starting from ₪11,000",
+        "features": {
+          "everything": "Everything in Growth",
+          "workflows": "Custom workflows & business logic",
+          "automations": "Complex automation sequences",
+          "permissions": "Advanced permissions & roles",
+          "api": "API integrations with external tools",
+          "reporting": "Custom reporting modules (optional)",
+          "support": "Priority support",
+          "delivery": "Delivery time: up to 4 weeks"
+        }
+      }
+    },
+    "oneTime": "One-time project cost",
+    "requestQuote": "Request Quote",
+    "factors": {
+      "title": "What Affects",
+      "pricing": "Pricing?",
+      "subtitle": "Every build is tailored. Here are the main factors that influence the final cost:",
+      "dataComplexity": "Data Complexity",
+      "dataComplexityDesc": "Number of custom entities, relationships, and data models required",
+      "integrations": "Integrations",
+      "integrationsDesc": "Third-party services (WhatsApp, payments, APIs) and custom connections",
+      "userScale": "User Scale",
+      "userScaleDesc": "Number of users, roles, and permission complexity",
+      "automation": "Automation & Logic",
+      "automationDesc": "Workflow complexity, business rules, and automation sequences"
+    },
+    "exactQuote": {
+      "title": "Want an",
+      "exact": "Exact Quote?",
+      "subtitle": "Tell us what you need and we'll reply with a fast, clear proposal.",
+      "cta": "Request a Quote"
+    }
+  },
+  "contact": {
+    "title": "Let's Build",
+    "yourCRM": "Your CRM",
+    "subtitle": "Tell us about your business and we'll get back to you within 24 hours",
+    "form": {
+      "title": "Send Us a",
+      "message": "Message",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company Name",
+      "budgetRange": "Budget Range",
+      "selectRange": "Select a range",
+      "under5k": "Under ₪18,000",
+      "5k10k": "₪18,000 - ₪37,000",
+      "10k20k": "₪37,000 - ₪74,000",
+      "20kPlus": "₪74,000+",
+      "projectDetails": "Project Details",
+      "placeholder": "Tell us about your business and what you need...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": {
+        "title": "Message Sent!",
+        "message": "Thank you for reaching out. We'll get back to you within 24 hours.",
+        "another": "Send Another Message"
+      },
+      "error": "Something went wrong. Please try again."
+    },
+    "whatsapp": {
+      "title": "Prefer",
+      "whatsapp": "WhatsApp?",
+      "subtitle": "Get instant responses. Let's chat about your project.",
+      "cta": "Chat on WhatsApp"
+    },
+    "faq": {
+      "title": "Frequently Asked",
+      "questions": "Questions",
+      "q1": "How long does it take to build a custom CRM?",
+      "a1": "Most systems are delivered within 3 days to 4 weeks, depending on complexity and features. Smaller setups can be ready in a few days, while advanced builds can take up to a month.",
+      "q2": "Do I need technical knowledge to use the CRM?",
+      "a2": "No. We design intuitive interfaces and provide full training for your team.",
+      "q3": "Can you integrate with my existing tools?",
+      "a3": "Yes. We can integrate with WhatsApp, email, payment systems, calendars, and most third-party APIs.",
+      "q4": "What happens after the CRM is built?",
+      "a4": "You get the complete source code, documentation, and post-launch support. You own everything.",
+      "q5": "Do you offer ongoing maintenance?",
+      "a5": "Yes. We offer optional maintenance packages for updates, new features, and technical support."
+    }
+  },
+  "cta": {
+    "ready": "Ready to Transform Your Business?",
+    "description": "Let's discuss how a custom CRM system can streamline your operations and accelerate growth.",
+    "requestQuote": "Request a Quote",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "workTogether": "Let's Work Together",
+    "workTogetherDesc": "Ready to build a CRM system that transforms your business? Let's talk.",
+    "needCRM": "Need a Custom CRM for Your Industry?",
+    "needCRMDesc": "Every business is unique. Let's build a system that fits yours perfectly."
+  },
+  "common": {
+    "viewAll": "View All Projects",
+    "orChat": "Or chat on WhatsApp"
+  },
+  "project": {
+    "backToProjects": "Back to Projects",
+    "confidentialClient": "Confidential Client",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "keyFeatures": "Key Features",
+    "needSimilar": "Need a Similar System?",
+    "needSimilarDesc": "Let's discuss how we can build a custom CRM system for your business.",
+    "getInTouch": "Get in Touch"
+  }
+}
