@@ -242,6 +242,6 @@ export function getAllTags(): string[] {
   return Array.from(tags).sort();
 }
 
-export function getProjects() {
+export function getProjects(): Project[] {
   return projects;
 }
