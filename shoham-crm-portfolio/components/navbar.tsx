@@ -1,30 +1,43 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Work", href: "/work" },
-  { name: "About", href: "/about" },
-  { name: "Pricing", href: "/pricing" },
-  { name: "Contact", href: "/contact" },
-];
+import { useLocale } from "@/lib/use-locale";
+import { type Locale, locales } from "@/lib/i18n";
 
 export function Navbar() {
   const pathname = usePathname();
+  const params = useParams();
+  const locale = (params?.locale as Locale) || "en";
+  const { t } = useLocale();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Get current path without locale
+  const pathWithoutLocale = pathname.replace(/^\/(en|he)/, "") || "/";
+
+  // Switch locale while keeping the same page
+  const switchLocale = (newLocale: Locale) => {
+    return `/${newLocale}${pathWithoutLocale}`;
+  };
+
+  const navigation = [
+    { name: t("nav.home"), href: "/" },
+    { name: t("nav.work"), href: "/work" },
+    { name: t("nav.about"), href: "/about" },
+    { name: t("nav.pricing"), href: "/pricing" },
+    { name: t("nav.contact"), href: "/contact" },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-zinc-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="text-xl font-bold">
+          <Link href={`/${locale}`} className="text-xl font-bold">
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               Shoham Emanuel
             </span>
@@ -33,11 +46,12 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navigation.map((item) => {
-              const isActive = pathname === item.href;
+              const href = `/${locale}${item.href}`;
+              const isActive = pathname === href || (item.href === "/" && pathname === `/${locale}`);
               return (
                 <Link
-                  key={item.name}
-                  href={item.href}
+                  key={item.href}
+                  href={href}
                   className={cn(
                     "relative text-sm font-medium transition-colors",
                     isActive
@@ -56,6 +70,24 @@ export function Navbar() {
                 </Link>
               );
             })}
+          </div>
+
+          {/* Language Switcher */}
+          <div className="hidden md:flex items-center gap-2 ml-4">
+            {locales.map((loc) => (
+              <Link
+                key={loc}
+                href={switchLocale(loc)}
+                className={cn(
+                  "px-3 py-1.5 text-xs font-medium rounded-lg transition-colors",
+                  locale === loc
+                    ? "bg-purple-500/20 text-purple-400"
+                    : "text-zinc-400 hover:text-white hover:bg-zinc-800"
+                )}
+              >
+                {loc === "en" ? "EN" : "עברית"}
+              </Link>
+            ))}
           </div>
 
           {/* Mobile menu button */}
@@ -79,11 +111,12 @@ export function Navbar() {
         >
           <div className="px-4 py-4 space-y-3">
             {navigation.map((item) => {
-              const isActive = pathname === item.href;
+              const href = `/${locale}${item.href}`;
+              const isActive = pathname === href || (item.href === "/" && pathname === `/${locale}`);
               return (
                 <Link
-                  key={item.name}
-                  href={item.href}
+                  key={item.href}
+                  href={href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={cn(
                     "block px-4 py-2 rounded-lg text-sm font-medium transition-colors",
@@ -96,6 +129,24 @@ export function Navbar() {
                 </Link>
               );
             })}
+            {/* Language Switcher Mobile */}
+            <div className="flex items-center gap-2 pt-2 border-t border-zinc-800">
+              {locales.map((loc) => (
+                <Link
+                  key={loc}
+                  href={switchLocale(loc)}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={cn(
+                    "flex-1 px-3 py-2 text-sm font-medium rounded-lg text-center transition-colors",
+                    locale === loc
+                      ? "bg-purple-500/20 text-purple-400"
+                      : "text-zinc-400 hover:bg-zinc-800 hover:text-white"
+                  )}
+                >
+                  {loc === "en" ? "EN" : "עברית"}
+                </Link>
+              ))}
+            </div>
           </div>
         </motion.div>
       )}

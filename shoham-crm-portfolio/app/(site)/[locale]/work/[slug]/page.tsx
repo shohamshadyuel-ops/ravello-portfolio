@@ -47,7 +47,7 @@ export default function ProjectPage({ params }: { params: { slug: string; locale
           {project.confidentialityLevel === "high" && (
             <div className="flex items-center gap-2 text-sm text-[#746BFF] mb-6">
               <Lock size={16} />
-              <span>Confidential Client</span>
+              <span>{t("project.confidentialClient")}</span>
             </div>
           )}
 

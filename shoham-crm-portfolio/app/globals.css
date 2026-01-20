@@ -77,3 +77,29 @@ html {
   outline: 2px solid rgba(168, 85, 247, 0.5);
   outline-offset: 2px;
 }
+
+/* RTL Support */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="ltr"] {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+/* RTL text alignment - only for body, not forced on all elements */
+html[dir="rtl"] {
+  text-align: right;
+}
+
+html[dir="ltr"] {
+  text-align: left;
+}

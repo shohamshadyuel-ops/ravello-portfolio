@@ -312,6 +312,7 @@
   "project": {
     "backToProjects": "Back to Projects",
     "confidentialClient": "Confidential Client",
+    "viewProject": "View Project",
     "challenge": "Challenge",
     "solution": "Solution",
     "keyFeatures": "Key Features",

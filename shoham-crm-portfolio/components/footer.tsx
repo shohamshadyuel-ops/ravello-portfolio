@@ -1,26 +1,33 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, MessageCircle, Linkedin, Github } from "lucide-react";
-
-const navigation = {
-  main: [
-    { name: "Home", href: "/" },
-    { name: "Work", href: "/work" },
-    { name: "About", href: "/about" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Contact", href: "/contact" },
-  ],
-  social: [
-    {
-      name: "WhatsApp",
-      href: process.env.NEXT_PUBLIC_WHATSAPP_URL || "https://wa.me/972504242641",
-      icon: MessageCircle,
-    },
-  ],
-};
+import { useParams } from "next/navigation";
+import { Mail, MessageCircle } from "lucide-react";
+import { useLocale } from "@/lib/use-locale";
+import { type Locale } from "@/lib/i18n";
 
 export function Footer() {
+  const params = useParams();
+  const locale = (params?.locale as Locale) || "en";
+  const { t } = useLocale();
+
+  const navigation = {
+    main: [
+      { name: t("nav.home"), href: "/" },
+      { name: t("nav.work"), href: "/work" },
+      { name: t("nav.about"), href: "/about" },
+      { name: t("nav.pricing"), href: "/pricing" },
+      { name: t("nav.contact"), href: "/contact" },
+    ],
+    social: [
+      {
+        name: "WhatsApp",
+        href: process.env.NEXT_PUBLIC_WHATSAPP_URL || "https://wa.me/972504242641",
+        icon: MessageCircle,
+      },
+    ],
+  };
+
   return (
     <footer className="border-t border-zinc-800/50 bg-black/50 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -43,9 +50,9 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {navigation.main.map((item) => (
-                <li key={item.name}>
+                <li key={item.href}>
                   <Link
-                    href={item.href}
+                    href={`/${locale}${item.href}`}
                     className="text-sm text-zinc-400 hover:text-purple-400 transition-colors"
                   >
                     {item.name}
@@ -72,11 +79,11 @@ export function Footer() {
                 </a>
               ))}
               <Link
-                href="/contact"
+                href={`/${locale}/contact`}
                 className="flex items-center gap-2 text-sm text-zinc-400 hover:text-purple-400 transition-colors"
               >
                 <Mail size={16} />
-                Contact Form
+                {t("nav.contact")}
               </Link>
             </div>
           </div>

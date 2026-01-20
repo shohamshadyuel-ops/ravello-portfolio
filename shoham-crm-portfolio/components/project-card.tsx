@@ -1,10 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowRight, Lock } from "lucide-react";
 import { GlowCard } from "@/components/ui/glow-card";
+import { useLocale } from "@/lib/use-locale";
 import type { Project } from "@/content/projects";
+import { type Locale } from "@/lib/i18n";
 
 interface ProjectCardProps {
   project: Project;
@@ -12,19 +15,23 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
+  const params = useParams();
+  const locale = (params?.locale as Locale) || "en";
+  const { t } = useLocale();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <Link href={`/work/${project.slug}`}>
+      <Link href={`/${locale}/work/${project.slug}`}>
         <GlowCard className="h-full group cursor-pointer">
           {/* Confidentiality Badge */}
           {project.confidentialityLevel === "high" && (
             <div className="flex items-center gap-2 text-xs text-purple-400 mb-3">
               <Lock size={12} />
-              <span>Confidential Client</span>
+              <span>{t("project.confidentialClient")}</span>
             </div>
           )}
 
@@ -53,7 +60,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
           {/* View Project Link */}
           <div className="flex items-center gap-2 text-sm text-purple-400 group-hover:gap-3 transition-all">
-            <span>View Project</span>
+            <span>{t("project.viewProject")}</span>
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </div>
         </GlowCard>

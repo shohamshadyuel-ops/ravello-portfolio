@@ -5,6 +5,7 @@ import "../../globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { NexioBackground } from "@/components/background/nexio-background";
+import { LocaleHtmlAttributes } from "@/components/locale-html-attributes";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -38,13 +39,16 @@ export default function LocaleLayout({
   const dir = locale === "he" ? "rtl" : "ltr";
 
   return (
-    <div lang={locale} dir={dir} className={`${inter.variable} ${manrope.variable} ${inter.className} overflow-x-hidden w-full`}>
-      <NexioBackground />
-      <Navbar />
-      <main className="min-h-screen pt-16 sm:pt-20 lg:pt-24 w-full overflow-x-hidden">
-        {children}
-      </main>
-      <Footer />
-    </div>
+    <>
+      <LocaleHtmlAttributes locale={locale} />
+      <div className={`${inter.variable} ${manrope.variable} ${inter.className} overflow-x-hidden w-full ${dir}`}>
+        <NexioBackground />
+        <Navbar />
+        <main className="min-h-screen pt-16 sm:pt-20 lg:pt-24 w-full overflow-x-hidden">
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
