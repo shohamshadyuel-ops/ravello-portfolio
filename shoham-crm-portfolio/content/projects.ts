@@ -241,3 +241,9 @@ export function getAllTags(): string[] {
   });
   return Array.from(tags).sort();
 }
+
+export function getProjects() {
+  return projects;
+}
+
+export default getProjects;
