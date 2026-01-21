@@ -35,7 +35,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Shoham Emanuel
+              Ravello Studio
             </h3>
             <p className="mt-2 text-sm text-zinc-400">
               Custom CRM Systems Developer
@@ -92,7 +92,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-zinc-800/50">
           <p className="text-center text-sm text-zinc-500">
-            © {new Date().getFullYear()} Shoham Emanuel. All rights reserved.
+            © {new Date().getFullYear()} Ravello Studio. All rights reserved.
           </p>
         </div>
       </div>

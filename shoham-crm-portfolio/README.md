@@ -1,6 +1,6 @@
-# Shoham Emanuel - Custom CRM Portfolio Website
+# Ravello Studio - Custom CRM Portfolio Website
 
-A production-ready, modern portfolio website built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion. Features a dark luxury futuristic design with 3D elements, smooth animations, and seamless Base44 CRM integration for lead capture.
+A production-ready, modern portfolio website built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion. Features a dark luxury futuristic design with 3D elements, smooth animations, and email-based lead capture (Resend).
 
 ## 🚀 Features
 
@@ -8,7 +8,7 @@ A production-ready, modern portfolio website built with Next.js 14, TypeScript, 
 - **Premium Design**: Dark luxury theme with glassmorphism, neon accents, and 3D elements
 - **Smooth Animations**: Framer Motion for section reveals and micro-interactions
 - **3D Hero Scene**: React Three Fiber for interactive 3D background (performance-optimized)
-- **Lead Capture**: Integrated with Base44 CRM with anti-spam protection
+- **Lead Capture**: Contact form sends email via Resend (with anti-spam protection)
 - **Fully Responsive**: Mobile-first design that works on all devices
 - **SEO Optimized**: Proper meta tags, semantic HTML, and fast load times
 - **Accessibility**: WCAG compliant with keyboard navigation and reduced motion support
@@ -87,8 +87,8 @@ cp .env.example .env.local
 
 2. Open `.env.local` in a text editor and fill in your values:
 ```env
-# Base44 CRM Integration (REQUIRED for lead submission to work)
-BASE44_LEAD_ENDPOINT=https://your-base44-public-function-url
+# Email (Resend)
+RESEND_API_KEY=your_resend_api_key
 
 # Public URLs (already configured)
 NEXT_PUBLIC_WHATSAPP_URL=https://wa.me/972504242641
@@ -96,8 +96,6 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
 
 **Important Notes:**
-- `BASE44_LEAD_ENDPOINT` should be your Base44 public function URL
-- If you don't have a Base44 endpoint yet, the form will still work but won't save leads
 - Never commit `.env.local` to version control (it's in `.gitignore`)
 
 ### 5. Run Development Server
@@ -108,24 +106,15 @@ npm run dev
 
 The site will be available at: http://localhost:3000
 
-## 🧪 Testing Lead Submission
+## 🧪 Testing Contact Form
 
-### Without Base44 Integration
-
-Even without a Base44 endpoint, you can test the form:
+Submit a test message and confirm you receive the email:
 
 1. Go to http://localhost:3000/contact
 2. Fill out the form
 3. Submit
 4. You'll see a success message
-5. Check your terminal logs for the submitted data
-
-### With Base44 Integration
-
-1. Set `BASE44_LEAD_ENDPOINT` in `.env.local`
-2. Go to http://localhost:3000/contact
-3. Fill out and submit the form
-4. Check your Base44 dashboard for the new lead
+5. Check your inbox for the message
 
 **Testing Anti-Spam Features:**
 - Try submitting 6+ times in an hour → Rate limit kicks in
@@ -203,7 +192,7 @@ export const projects: Project[] = [
    - In Vercel project dashboard
    - Go to Settings → Environment Variables
    - Add your variables:
-     - `BASE44_LEAD_ENDPOINT`: Your Base44 URL
+     - `RESEND_API_KEY`: Your Resend API key
      - `NEXT_PUBLIC_WHATSAPP_URL`: Your WhatsApp URL
      - `NEXT_PUBLIC_SITE_URL`: Your production URL
    - Redeploy after adding variables
@@ -242,26 +231,24 @@ npm run start
 # Runs on port 3000
 ```
 
-## ✅ Verifying Base44 Integration
+## ✅ Verifying Contact Form Email
 
 1. **Check Environment Variables**
    - In Vercel dashboard → Settings → Environment Variables
-   - Confirm `BASE44_LEAD_ENDPOINT` is set
+   - Confirm `RESEND_API_KEY` is set
 
 2. **Test Form Submission**
    - Go to your live site's contact page
-   - Submit a test lead
-   - Check Base44 dashboard for the lead
+   - Submit a test message
+   - Confirm you received the email
 
 3. **Check Vercel Logs**
    - Vercel dashboard → Deployments → Latest → Logs
-   - Look for successful API calls to Base44
+   - Look for `/api/contact` logs if troubleshooting
 
 4. **Common Issues**
-   - **404 Error**: Base44 endpoint URL is incorrect
-   - **CORS Error**: Base44 function doesn't allow your domain
-   - **Timeout**: Base44 function is slow or down
-   - **Rate Limit**: Too many test submissions (wait 1 hour)
+   - **Missing env var**: `RESEND_API_KEY` not set in Production
+   - **Resend sending error**: Check Resend dashboard/logs
 
 ## 🏗️ Project Structure
 
@@ -270,7 +257,7 @@ shoham-crm-portfolio/
 ├── app/
 │   ├── about/              # About page
 │   ├── api/
-│   │   └── lead/          # Lead submission API route
+│   │   └── contact/       # Contact form email API route
 │   ├── contact/           # Contact page with form
 │   ├── pricing/           # Pricing page
 │   ├── work/              # Projects portfolio

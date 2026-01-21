@@ -32,7 +32,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href={`/${locale}`} className="text-xl font-bold">
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Shoham Emanuel
+              Ravello Studio
             </span>
           </Link>
 

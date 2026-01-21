@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { NeonButton } from "@/components/ui/neon-button";
 import { MessageCircle, Mail } from "lucide-react";
 import Link from "next/link";
+import { useLocale } from "@/lib/use-locale";
 
 interface CTASectionProps {
   title?: string;
@@ -13,11 +14,25 @@ interface CTASectionProps {
 }
 
 export function CTASection({
-  title = "Ready to Transform Your Business?",
-  description = "Let's discuss how a custom CRM system can streamline your operations and accelerate growth.",
-  primaryCTA = { text: "Request a Quote", href: "/contact" },
-  secondaryCTA = { text: "Chat on WhatsApp", href: process.env.NEXT_PUBLIC_WHATSAPP_URL || "https://wa.me/972504242641" },
+  title,
+  description,
+  primaryCTA,
+  secondaryCTA,
 }: CTASectionProps) {
+  const { t } = useLocale();
+
+  const resolvedTitle = title || t("cta.ready");
+  const resolvedDescription =
+    description || t("cta.description");
+  const resolvedPrimary = primaryCTA || {
+    text: t("cta.requestQuote"),
+    href: "/contact",
+  };
+  const resolvedSecondary = secondaryCTA || {
+    text: t("cta.chatWhatsapp"),
+    href: process.env.NEXT_PUBLIC_WHATSAPP_URL || "https://wa.me/972504242641",
+  };
+
   return (
     <section className="relative py-24 overflow-hidden">
       {/* Gradient Background */}
@@ -44,7 +59,7 @@ export function CTASection({
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-bold text-white mb-6"
         >
-          {title}
+          {resolvedTitle}
         </motion.h2>
 
         <motion.p
@@ -54,7 +69,7 @@ export function CTASection({
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-xl text-zinc-300 mb-10 max-w-2xl mx-auto"
         >
-          {description}
+          {resolvedDescription}
         </motion.p>
 
         <motion.div
@@ -64,17 +79,17 @@ export function CTASection({
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <Link href={primaryCTA.href}>
+          <Link href={resolvedPrimary.href}>
             <NeonButton size="lg" variant="primary">
-              <Mail size={20} />
-              {primaryCTA.text}
+              <Mail className="h-4 w-4" />
+              {resolvedPrimary.text}
             </NeonButton>
           </Link>
 
-          <a href={secondaryCTA.href} target="_blank" rel="noopener noreferrer">
+          <a href={resolvedSecondary.href} target="_blank" rel="noopener noreferrer">
             <NeonButton size="lg" variant="outline">
-              <MessageCircle size={20} />
-              {secondaryCTA.text}
+              <MessageCircle className="h-4 w-4" />
+              {resolvedSecondary.text}
             </NeonButton>
           </a>
         </motion.div>

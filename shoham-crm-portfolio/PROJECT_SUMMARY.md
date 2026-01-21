@@ -204,39 +204,26 @@ Each includes:
 - Optimized form layout
 - Readable text sizes
 
-## 🔌 Base44 CRM Integration
+## ✉️ Contact Form Email (Resend)
 
 **What It Does:**
 - Captures leads from contact form
-- Validates data with Zod
-- Forwards to Base44 public function
-- Handles timeouts and retries
-- Shows user-friendly messages
-- Never exposes endpoint to client
+- Sends an email via Resend from the server
+- Includes anti-spam honeypot protection
 
 **How It Works:**
 ```
-User fills form → 
-POST /api/lead → 
-Server validates → 
-Rate limit check → 
-Honeypot check → 
-Forward to Base44 → 
-Return success/error
+User fills form →
+POST /api/contact →
+Server validates →
+Honeypot check →
+Send email via Resend →
+Return ok/error
 ```
 
 **Setup Required:**
-1. Get Base44 public function URL
-2. Add to `.env.local` as `BASE44_LEAD_ENDPOINT`
-3. Test locally
-4. Add to Vercel environment variables
-5. Deploy
-
-**Testing:**
-- Works without Base44 (logs to console)
-- With Base44: Full integration
-- Rate limit: 5 submissions per hour per IP
-- Honeypot: Silent rejection for bots
+1. Add `RESEND_API_KEY` to environment variables
+2. Deploy
 
 ## 📊 Analytics Ready
 

@@ -53,17 +53,29 @@ export default function ContactPage() {
     setErrorMessage("");
 
     try {
-      const response = await fetch("/api/lead", {
+      const selectedBudgetLabel =
+        budgetOptions.find((opt) => opt.value === formData.budgetRange)?.label || "";
+
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          budget: selectedBudgetLabel || formData.budgetRange,
+          details: formData.message,
+          locale,
+          honeypot: formData.honeypot,
+        }),
       });
 
       const data = await response.json();
 
-      if (data.success) {
+      if (data.ok) {
         setStatus("success");
         setFormData({
           fullName: "",

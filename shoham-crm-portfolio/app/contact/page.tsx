@@ -49,17 +49,26 @@ export default function ContactPage() {
     setErrorMessage("");
 
     try {
-      const response = await fetch("/api/lead", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          budget: formData.budgetRange,
+          details: formData.message,
+          locale: "en",
+          honeypot: formData.honeypot,
+        }),
       });
 
       const data = await response.json();
 
-      if (data.success) {
+      if (data.ok) {
         setStatus("success");
         setFormData({
           fullName: "",

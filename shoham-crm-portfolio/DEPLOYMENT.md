@@ -76,12 +76,11 @@ Click "Environment Variables" section and add:
 
 | Name | Value | Environment |
 |------|-------|-------------|
-| `BASE44_LEAD_ENDPOINT` | Your Base44 public function URL | Production, Preview, Development |
+| `RESEND_API_KEY` | Your Resend API key | Production, Preview, Development |
 | `NEXT_PUBLIC_WHATSAPP_URL` | `https://wa.me/972504242641` | Production, Preview, Development |
 | `NEXT_PUBLIC_SITE_URL` | (leave empty for now) | - |
 
 **Important Notes:**
-- For `BASE44_LEAD_ENDPOINT`: Use your actual Base44 public function URL
 - Select all three environments (Production, Preview, Development) for each variable
 - We'll update `NEXT_PUBLIC_SITE_URL` after deployment
 
@@ -135,7 +134,7 @@ Open your Vercel URL in a browser and check:
 2. Fill out the form with test data
 3. Submit
 4. Check for success message
-5. **Important:** Check your Base44 dashboard to confirm the lead was created
+5. **Important:** Confirm you received the email
 
 ### 4.3 Test on Mobile
 
@@ -193,42 +192,26 @@ Value: cname.vercel-dns.com
 2. Update `NEXT_PUBLIC_SITE_URL` to your custom domain
 3. Redeploy
 
-## Step 6: Verify Base44 Integration
+## Step 6: Verify Contact Form Email (Resend)
 
 ### 6.1 Check Environment Variables
 
 1. Vercel dashboard → Settings → Environment Variables
-2. Confirm `BASE44_LEAD_ENDPOINT` is set correctly
-3. Value should be a complete URL starting with `https://`
+2. Confirm `RESEND_API_KEY` is set (Production, Preview, Development)
 
-### 6.2 Test Lead Submission
+### 6.2 Send a Test Message
 
 1. Go to your live site's contact page
-2. Submit a test lead with these details:
-   - Name: Test User
-   - Email: test@example.com
-   - Message: Testing Base44 integration
-3. Should see success message
+2. Submit a test message
+3. Confirm you received the email at `shohamsdesign@gmail.com`
 
-### 6.3 Verify in Base44
-
-1. Login to your Base44 workspace
-2. Check for the test lead
-3. Confirm all fields are populated correctly
-4. Verify source is "Portfolio Website"
-
-### 6.4 Check Vercel Logs (if issues)
+### 6.3 Check Vercel Logs (if issues)
 
 1. Vercel dashboard → Deployments → Latest
 2. Click on deployment
 3. Go to "Functions" tab
-4. Click on `/api/lead` function
+4. Click on `/api/contact`
 5. Check logs for errors
-
-**Common issues:**
-- **CORS error**: Your Base44 function might need to allow your domain
-- **404 error**: `BASE44_LEAD_ENDPOINT` URL is incorrect
-- **Timeout**: Base44 function is slow or down
 
 ## Troubleshooting
 

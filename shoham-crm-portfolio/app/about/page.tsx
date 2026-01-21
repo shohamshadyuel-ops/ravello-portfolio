@@ -30,7 +30,7 @@ const values = [
   {
     icon: Heart,
     title: "Client Success",
-    description: "Your success is my success. I'm invested in building systems that truly transform your operations.",
+    description: "Your success is our success. We're invested in building systems that truly transform your operations.",
   },
   {
     icon: Zap,
@@ -56,7 +56,7 @@ export default function AboutPage() {
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            About Me
+            About Ravello Studio
           </h1>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
             Building custom CRM systems that actually work for your business
@@ -73,16 +73,16 @@ export default function AboutPage() {
           <GlowCard>
             <div className="space-y-4 text-zinc-300 leading-relaxed">
               <p>
-                Hi, I'm <span className="text-purple-400 font-semibold">Shoham Emanuel</span>, a 19-year-old custom CRM systems developer specializing in building workflow-based platforms for businesses.
+                Ravello Studio is a boutique team focused on crafting custom CRM systems fully aligned with your workflows and operations.
               </p>
               <p>
-                I don't believe in one-size-fits-all solutions. Every business has unique processes, and your software should reflect that. That's why I build fully custom CRM systems from the ground up—tailored to your exact workflow, integrated with your existing tools, and designed to scale with your growth.
+                We don't believe in one-size-fits-all software. Every business has unique processes, so we design and build CRM systems from the ground up—tailored to your exact workflow, integrated with your existing tools, and ready to scale with your growth.
               </p>
               <p>
-                From real estate agencies to e-commerce operations, healthcare clinics to logistics companies, I've helped businesses across industries streamline their operations with custom-built systems. My approach combines technical expertise with a deep understanding of business operations, ensuring that every feature adds real value.
+                From real estate agencies to e-commerce operations, healthcare clinics to logistics companies, we've helped businesses streamline operations with automation-first, design-led platforms. Our approach blends technical depth with business insight, ensuring every feature delivers measurable value.
               </p>
               <p>
-                When I'm not coding, I'm studying business processes, learning about new industries, and finding innovative ways to automate workflows. I'm passionate about helping businesses work smarter, not harder.
+                If you need a bespoke CRM that feels in-house—without per-seat fees—let's talk about how Ravello Studio can build it.
               </p>
             </div>
           </GlowCard>
@@ -123,7 +123,7 @@ export default function AboutPage() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mb-16"
         >
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">My Values</h2>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {values.map((value, index) => (
               <motion.div

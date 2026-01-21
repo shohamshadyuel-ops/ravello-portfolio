@@ -31,12 +31,12 @@ This will take 2-3 minutes. Go grab a coffee! ☕
 cp .env.example .env.local
 ```
 
-Open `.env.local` in a text editor and add your Base44 URL:
+Open `.env.local` in a text editor and add your Resend API key:
 ```env
-BASE44_LEAD_ENDPOINT=https://your-base44-url-here
+RESEND_API_KEY=your_resend_api_key
 ```
 
-**Don't have a Base44 URL yet?** That's okay! The site will still work, but form submissions won't be saved.
+**Don't have a Resend key yet?** The UI will still work, but form submissions won't be delivered.
 
 ## 4. Start Development Server
 
