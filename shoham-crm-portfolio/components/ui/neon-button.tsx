@@ -25,18 +25,22 @@ export function NeonButton({
   disabled = false,
   href,
 }: NeonButtonProps) {
-  const baseStyles = "relative font-semibold rounded-lg transition-all duration-300 inline-flex items-center justify-center gap-2";
+  const baseStyles =
+    "relative font-semibold rounded-xl transition-all duration-300 ease-out inline-flex items-center justify-center gap-2";
   
   const sizeStyles = {
-    sm: "px-4 py-2 text-sm",
+    sm: "px-6 py-3 text-sm",
     md: "px-6 py-3 text-base",
     lg: "px-8 py-4 text-lg",
   };
 
   const variantStyles = {
-    primary: "bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 hover:scale-105",
-    secondary: "bg-zinc-800 text-white border border-zinc-700 hover:border-purple-500/50 hover:bg-zinc-700",
-    outline: "bg-transparent text-purple-400 border-2 border-purple-500/50 hover:bg-purple-500/10 hover:border-purple-400",
+    primary:
+      "bg-gradient-to-r from-[#7B5CFF] via-[#9A6BFF] to-[#B68CFF] text-white shadow-[0_8px_30px_rgba(123,92,255,0.45)] hover:shadow-[0_12px_40px_rgba(123,92,255,0.65)] hover:scale-105",
+    secondary:
+      "bg-transparent border border-[rgba(123,92,255,0.6)] text-[#B68CFF] hover:bg-[rgba(123,92,255,0.08)] hover:shadow-[0_0_20px_rgba(123,92,255,0.35)] hover:text-[#C8A8FF]",
+    outline:
+      "bg-transparent border border-[rgba(123,92,255,0.6)] text-[#B68CFF] hover:bg-[rgba(123,92,255,0.08)] hover:shadow-[0_0_20px_rgba(123,92,255,0.35)] hover:text-[#C8A8FF]",
   };
 
   const disabledStyles = "opacity-50 cursor-not-allowed hover:scale-100 hover:shadow-none";
@@ -49,8 +53,6 @@ export function NeonButton({
     className
   );
 
-  const MotionComponent = motion.button;
-
   if (href && !disabled) {
     return (
       <a href={href} className={combinedClassName}>
@@ -58,6 +60,8 @@ export function NeonButton({
       </a>
     );
   }
+
+  const MotionComponent = motion.button;
 
   return (
     <MotionComponent
@@ -70,7 +74,7 @@ export function NeonButton({
     >
       {/* Glow effect */}
       {variant === "primary" && !disabled && (
-        <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#7B5CFF] via-[#9A6BFF] to-[#B68CFF] blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
       )}
       
       <span className="relative z-10">{children}</span>

@@ -91,13 +91,13 @@ export default function ContactPage() {
     });
   };
 
-  // Budget ranges in ILS (base values)
+  // Budget ranges - English options are fixed USD values
   const budgetRanges = [
     { value: "", min: null, max: null }, // placeholder
-    { value: "under-5k", min: null, max: 3000 },
-    { value: "5k-10k", min: 3000, max: 8000 },
-    { value: "10k-20k", min: 8000, max: 15000 },
-    { value: "20k-plus", min: 15000, max: null },
+    { value: "under_1000", min: null, max: 1000 },
+    { value: "1000_2000", min: 1000, max: 2000 },
+    { value: "2000_3000", min: 2000, max: 3000 },
+    { value: "3000_plus", min: 3000, max: null },
   ];
 
   const budgetOptions = budgetRanges.map((range) => {
@@ -106,16 +106,23 @@ export default function ContactPage() {
     }
     
     if (locale === "he") {
-      // Use Hebrew translation for Hebrew locale
-      const key = range.value === "under-5k" ? "under5k" :
-                   range.value === "5k-10k" ? "5k10k" :
-                   range.value === "10k-20k" ? "10k20k" : "20kPlus";
+      // Use Hebrew translation for Hebrew locale (keep existing Hebrew options)
+      const key = range.value === "under_1000" ? "under5k" :
+                   range.value === "1000_2000" ? "5k10k" :
+                   range.value === "2000_3000" ? "10k20k" : "20kPlus";
       return { value: range.value, label: t(`contact.form.${key}`) };
     } else {
-      // Compute English labels from ILS values (round to nearest 10 for cleaner values)
-      const minUsd = range.min ? ilsToUsd(range.min, true) : null;
-      const maxUsd = range.max ? ilsToUsd(range.max, true) : null;
-      return { value: range.value, label: formatBudgetRange(minUsd, maxUsd, "en") };
+      // English labels - exact values as specified
+      if (range.value === "under_1000") {
+        return { value: range.value, label: "Under $1,000" };
+      } else if (range.value === "1000_2000") {
+        return { value: range.value, label: "$1,000 – $2,000" };
+      } else if (range.value === "2000_3000") {
+        return { value: range.value, label: "$2,000 – $3,000" };
+      } else if (range.value === "3000_plus") {
+        return { value: range.value, label: "$3,000+" };
+      }
+      return { value: range.value, label: "" };
     }
   });
 

@@ -7,7 +7,8 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useLocale } from "@/lib/use-locale";
-import { type Locale, locales } from "@/lib/i18n";
+import { type Locale } from "@/lib/i18n";
+import LanguageSwitcher from "@/components/language-switcher";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -15,14 +16,6 @@ export function Navbar() {
   const locale = (params?.locale as Locale) || "en";
   const { t } = useLocale();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // Get current path without locale
-  const pathWithoutLocale = pathname.replace(/^\/(en|he)/, "") || "/";
-
-  // Switch locale while keeping the same page
-  const switchLocale = (newLocale: Locale) => {
-    return `/${newLocale}${pathWithoutLocale}`;
-  };
 
   const navigation = [
     { name: t("nav.home"), href: "/" },
@@ -73,21 +66,8 @@ export function Navbar() {
           </div>
 
           {/* Language Switcher */}
-          <div className="hidden md:flex items-center gap-2 ml-4">
-            {locales.map((loc) => (
-              <Link
-                key={loc}
-                href={switchLocale(loc)}
-                className={cn(
-                  "px-3 py-1.5 text-xs font-medium rounded-lg transition-colors",
-                  locale === loc
-                    ? "bg-purple-500/20 text-purple-400"
-                    : "text-zinc-400 hover:text-white hover:bg-zinc-800"
-                )}
-              >
-                {loc === "en" ? "EN" : "עברית"}
-              </Link>
-            ))}
+          <div className="hidden md:flex items-center ml-4">
+            <LanguageSwitcher locale={locale} />
           </div>
 
           {/* Mobile menu button */}
@@ -130,22 +110,10 @@ export function Navbar() {
               );
             })}
             {/* Language Switcher Mobile */}
-            <div className="flex items-center gap-2 pt-2 border-t border-zinc-800">
-              {locales.map((loc) => (
-                <Link
-                  key={loc}
-                  href={switchLocale(loc)}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={cn(
-                    "flex-1 px-3 py-2 text-sm font-medium rounded-lg text-center transition-colors",
-                    locale === loc
-                      ? "bg-purple-500/20 text-purple-400"
-                      : "text-zinc-400 hover:bg-zinc-800 hover:text-white"
-                  )}
-                >
-                  {loc === "en" ? "EN" : "עברית"}
-                </Link>
-              ))}
+            <div className="pt-2 border-t border-zinc-800">
+              <div onClick={() => setMobileMenuOpen(false)}>
+                <LanguageSwitcher locale={locale} />
+              </div>
             </div>
           </div>
         </motion.div>
