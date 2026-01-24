@@ -13,9 +13,11 @@
     "ctaQuote": "Request a Quote",
     "ctaWork": "View Work",
     "stats": {
+      "deliveryTimeValue": "3–4 weeks",
       "deliveryTime": "Delivery Time",
       "customBuilt": "Custom Built",
-      "powered": "Powered"
+      "premiumBuild": "Premium Build",
+      "crafted": "Crafted"
     },
     "sections": {
       "everything": "Everything You Need",
@@ -137,9 +139,9 @@
   "about": {
     "title": "About",
     "studio": "Ravello Studio",
-    "subtitle": "Custom CRM systems built with Base44. Workflow-driven. Business-focused.",
+    "subtitle": "Custom CRM systems. Workflow-driven. Business-focused.",
     "bio": {
-      "p1": "specializes in building custom CRM systems powered by Base44—fully tailored platforms that transform how businesses manage workflows, automate processes, and drive growth.",
+      "p1": "specializes in building custom CRM systems—fully tailored platforms that transform how businesses manage workflows, automate processes, and drive growth.",
       "p2": "We don't believe in one-size-fits-all solutions. Every business has unique processes, and your software should reflect that. That's why we build fully custom CRM systems from the ground up—tailored to your exact workflow, integrated with your existing tools, and designed to scale with your growth.",
       "p3": "From real estate agencies to e-commerce operations, healthcare clinics to logistics companies, we've helped businesses across industries streamline their operations with custom-built systems. Our approach combines technical expertise with a deep understanding of business operations, ensuring that every feature adds real value and drives measurable outcomes.",
       "p4": "We deliver fast—from simple setups in 3 days to complex enterprise systems in 4 weeks. Every system features clean, luxury UI design, intelligent automations, seamless integrations, and workflow-driven architecture that puts your business processes first."
@@ -176,7 +178,7 @@
   "pricing": {
     "title": "Flexible",
     "pricing": "Pricing",
-    "subtitle": "Built with Base44 • Delivered in 3 days to 4 weeks • No subscriptions, no per-user fees.",
+    "subtitle": "Delivered in 3 days to 4 weeks • No subscriptions, no per-user fees.",
     "tiers": {
       "starter": {
         "name": "Starter",

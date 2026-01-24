@@ -108,7 +108,7 @@ taskkill /PID <PID_NUMBER> /F
 ### Form not submitting
 - Check `.env.local` exists and has correct values
 - Check browser console (F12) for errors
-- Verify Base44 endpoint is correct
+- Verify `RESEND_API_KEY` is set in your environment variables
 
 ### 3D scene laggy
 - Normal on slower computers
@@ -130,7 +130,7 @@ Before deploying:
 - [ ] Projects updated with your content
 - [ ] About page updated
 - [ ] `.env.local` configured
-- [ ] Base44 integration tested (if available)
+- [ ] Resend email sending tested
 
 ---
 

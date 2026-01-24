@@ -394,14 +394,14 @@ For technical issues:
 7. ✅ Deploy to Vercel
 8. ✅ Add environment variables in Vercel
 9. ✅ Test lead submission on live site
-10. ✅ Verify Base44 integration works
+10. ✅ Verify contact email delivery works
 
 ## 📊 Production Checklist
 
 Before going live, ensure:
 
 - [ ] All environment variables are set in Vercel
-- [ ] Base44 endpoint is working and tested
+- [ ] `RESEND_API_KEY` is set and email sending works
 - [ ] WhatsApp link is correct
 - [ ] All project content is updated
 - [ ] Contact form has been tested
@@ -413,4 +413,4 @@ Before going live, ensure:
 
 ---
 
-Built with ❤️ by Shoham Emanuel
+Built with ❤️ by Ravello Studio

@@ -7,7 +7,7 @@ This guide will walk you through deploying your portfolio website to Vercel, ste
 Before you begin:
 - ✅ Project is working locally (`npm run dev`)
 - ✅ You have a GitHub account
-- ✅ You have your Base44 CRM endpoint URL ready
+- ✅ You have your Resend API key ready (`RESEND_API_KEY`)
 
 ## Step 1: Create GitHub Repository
 
@@ -271,7 +271,7 @@ Check Vercel Analytics dashboard:
 ## Security Best Practices
 
 1. **Never commit `.env.local`** - It's in `.gitignore`
-2. **Keep Base44 endpoint private** - Only in environment variables
+2. **Keep `RESEND_API_KEY` private** - Only in environment variables
 3. **Use environment variables** for all sensitive data
 4. **Enable Vercel's DDoS protection** - In Settings
 5. **Monitor function logs** - Check for suspicious activity
@@ -315,7 +315,7 @@ Before going live:
 
 - [ ] All content is updated and accurate
 - [ ] Environment variables are set in Vercel
-- [ ] Base44 integration tested and working
+- [ ] Contact email sending tested and working
 - [ ] Form submission tested on live site
 - [ ] Mobile responsiveness verified
 - [ ] All pages load without errors

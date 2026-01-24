@@ -8,7 +8,7 @@ I've built you a complete, professional portfolio website that is:
 - ✅ Fully responsive (mobile, tablet, desktop)
 - ✅ Optimized for performance
 - ✅ SEO-ready with proper meta tags
-- ✅ Integrated with Base44 CRM for lead capture
+- ✅ Contact form sends email via Resend
 - ✅ Secure with anti-spam protection
 - ✅ Ready to deploy to Vercel
 
@@ -20,7 +20,7 @@ I've built you a complete, professional portfolio website that is:
 3. **Individual Projects** (`/work/[slug]`) - Detailed case study pages with features, integrations, outcomes
 4. **About** (`/about`) - Professional bio, skills, values, tech stack
 5. **Pricing** (`/pricing`) - Three tiers (Starter, Growth, Advanced) with transparent pricing factors
-6. **Contact** (`/contact`) - Professional form with Base44 integration, WhatsApp CTA, FAQ
+6. **Contact** (`/contact`) - Professional form that sends email via Resend, WhatsApp CTA, FAQ
 
 ### Components (12 Custom)
 - `GlowCard` - Glassmorphism cards with gradient borders
@@ -45,7 +45,7 @@ I've built you a complete, professional portfolio website that is:
 - Accessibility features (keyboard nav, reduced motion support)
 
 **Lead Capture:**
-- Base44 CRM integration
+- Email via Resend (`/api/contact`)
 - Form validation with Zod
 - Anti-spam honeypot
 - IP-based rate limiting (5 per hour)
@@ -75,7 +75,7 @@ I've built you a complete, professional portfolio website that is:
 shoham-crm-portfolio/
 ├── app/                    # Next.js App Router pages
 │   ├── about/             # About page
-│   ├── api/lead/          # Lead submission endpoint
+│   ├── api/contact/       # Contact form email endpoint
 │   ├── contact/           # Contact form page
 │   ├── pricing/           # Pricing page
 │   ├── work/              # Portfolio pages
@@ -110,7 +110,7 @@ See `QUICKSTART.md` for the fastest way to get running locally.
 ```bash
 npm install
 cp .env.example .env.local
-# Add your Base44 URL to .env.local
+# Add your Resend API key to .env.local
 npm run dev
 ```
 
@@ -254,11 +254,10 @@ Add tracking codes in `app/layout.tsx`.
    - Add environment variables
    - Deploy!
 
-4. **Configure Base44**
-   - Set up public function
-   - Add endpoint to Vercel
-   - Test lead capture
-   - Verify in Base44 dashboard
+4. **Configure Email (Resend)**
+   - Set `RESEND_API_KEY` in Vercel environment variables
+   - Submit a test message via the contact form
+   - Confirm you received the email
 
 5. **Go Live!**
    - Optional: Add custom domain

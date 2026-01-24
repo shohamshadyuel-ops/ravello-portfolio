@@ -106,7 +106,9 @@ export default function HomePage() {
             className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto w-full px-4"
           >
             <GlowCard hover={false} className="text-center">
-              <div className="text-3xl sm:text-4xl font-heading font-bold text-white mb-2">3-4 weeks</div>
+              <div className="text-3xl sm:text-4xl font-heading font-bold text-white mb-2">
+                {t("home.stats.deliveryTimeValue")}
+              </div>
               <div className="text-xs uppercase tracking-wide text-zinc-400 font-medium">{t("home.stats.deliveryTime")}</div>
             </GlowCard>
             <GlowCard hover={false} className="text-center">
@@ -114,8 +116,10 @@ export default function HomePage() {
               <div className="text-xs uppercase tracking-wide text-zinc-400 font-medium">{t("home.stats.customBuilt")}</div>
             </GlowCard>
             <GlowCard hover={false} className="text-center">
-              <div className="text-3xl sm:text-4xl font-heading font-bold text-white mb-2">Base44</div>
-              <div className="text-xs uppercase tracking-wide text-zinc-400 font-medium">{t("home.stats.powered")}</div>
+              <div className="text-3xl sm:text-4xl font-heading font-bold text-white mb-2">
+                {t("home.stats.premiumBuild")}
+              </div>
+              <div className="text-xs uppercase tracking-wide text-zinc-400 font-medium">{t("home.stats.crafted")}</div>
             </GlowCard>
           </motion.div>
         </div>
