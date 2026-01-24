@@ -13,8 +13,8 @@
     "ctaQuote": "בקש הצעת מחיר",
     "ctaWork": "צפה בעבודות",
     "stats": {
-      "deliveryTimeValue": "מסירה מהירה",
-      "deliveryTime": "בד״כ 3–7 ימים",
+      "deliveryTimeValue": "3–4 weeks",
+      "deliveryTime": "זמן אספקה",
       "customBuilt": "מותאם אישית",
       "premiumBuild": "בנייה פרימיום",
       "crafted": "נבנה"
@@ -178,7 +178,7 @@
   "pricing": {
     "title": "תמחור",
     "pricing": "גמיש",
-    "subtitle": "מסירה מהירה (בד״כ 3–7 ימים) ועד 4 שבועות • ללא מנויים, ללא תשלום למשתמש.",
+    "subtitle": "נמסר תוך 3 ימים עד 4 שבועות • ללא מנויים, ללא תשלום למשתמש.",
     "tiers": {
       "starter": {
         "name": "התחלתי",

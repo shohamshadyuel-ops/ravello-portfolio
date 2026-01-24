@@ -47,14 +47,14 @@ export function NeonButton({
     "relative inline-flex items-center justify-center gap-2 rounded-xl h-11 px-6 py-2.5 text-sm font-medium leading-none transition-all duration-200 ease-out select-none";
   
   const sizeStyles = {
-    sm: "h-10 px-5 py-2 text-sm",
-    md: "h-11 px-6 py-2.5 text-sm",
-    lg: "h-12 px-7 py-3 text-sm",
+    sm: "h-10 px-4 py-2 text-sm",
+    md: "h-11 px-5 sm:px-6 py-2.5 text-sm sm:text-base",
+    lg: "h-11 sm:h-12 px-5 sm:px-6 py-2.5 text-sm sm:text-base",
   };
 
   const variantStyles = {
     primary:
-      "bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white shadow-[0_0_0px_rgba(139,92,246,0)] hover:shadow-[0_0_24px_rgba(139,92,246,0.35)] hover:-translate-y-[1px]",
+      "bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white shadow-[0_0_0px_rgba(139,92,246,0)] hover:shadow-[0_0_18px_rgba(139,92,246,0.28)] hover:-translate-y-[1px]",
     secondary:
       "bg-transparent border border-white/15 text-white/90 hover:border-white/25 hover:bg-white/5 hover:-translate-y-[1px]",
     outline:
