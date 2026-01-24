@@ -103,23 +103,41 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto w-full px-4"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-5 md:gap-6 max-w-4xl mx-auto w-full px-4"
           >
-            <GlowCard hover={false} className="text-center">
-              <div className="text-3xl sm:text-4xl font-heading font-bold text-white mb-2">
+            <GlowCard
+              hover={false}
+              disableInlineShadow
+              className="p-5 md:p-6 min-h-[110px] flex flex-col items-center justify-center text-center shadow-[0_0_20px_rgba(168,85,247,0.18)] hover:shadow-[0_0_28px_rgba(168,85,247,0.22)] transition-shadow duration-200"
+            >
+              <div className="text-xl md:text-2xl font-heading font-semibold text-white mb-1">
                 {t("home.stats.deliveryTimeValue")}
               </div>
-              <div className="text-xs uppercase tracking-wide text-zinc-400 font-medium">{t("home.stats.deliveryTime")}</div>
+              <div className="text-xs md:text-sm uppercase tracking-normal text-white/60 font-medium">
+                {t("home.stats.deliveryTime")}
+              </div>
             </GlowCard>
-            <GlowCard hover={false} className="text-center">
-              <div className="text-3xl sm:text-4xl font-heading font-bold text-white mb-2">100%</div>
-              <div className="text-xs uppercase tracking-wide text-zinc-400 font-medium">{t("home.stats.customBuilt")}</div>
+            <GlowCard
+              hover={false}
+              disableInlineShadow
+              className="p-5 md:p-6 min-h-[110px] flex flex-col items-center justify-center text-center shadow-[0_0_20px_rgba(168,85,247,0.18)] hover:shadow-[0_0_28px_rgba(168,85,247,0.22)] transition-shadow duration-200"
+            >
+              <div className="text-xl md:text-2xl font-heading font-semibold text-white mb-1">100%</div>
+              <div className="text-xs md:text-sm uppercase tracking-normal text-white/60 font-medium">
+                {t("home.stats.customBuilt")}
+              </div>
             </GlowCard>
-            <GlowCard hover={false} className="text-center">
-              <div className="text-3xl sm:text-4xl font-heading font-bold text-white mb-2">
+            <GlowCard
+              hover={false}
+              disableInlineShadow
+              className="p-5 md:p-6 min-h-[110px] flex flex-col items-center justify-center text-center shadow-[0_0_20px_rgba(168,85,247,0.18)] hover:shadow-[0_0_28px_rgba(168,85,247,0.22)] transition-shadow duration-200"
+            >
+              <div className="text-xl md:text-2xl font-heading font-semibold text-white mb-1">
                 {t("home.stats.premiumBuild")}
               </div>
-              <div className="text-xs uppercase tracking-wide text-zinc-400 font-medium">{t("home.stats.crafted")}</div>
+              <div className="text-xs md:text-sm uppercase tracking-normal text-white/60 font-medium">
+                {t("home.stats.crafted")}
+              </div>
             </GlowCard>
           </motion.div>
         </div>

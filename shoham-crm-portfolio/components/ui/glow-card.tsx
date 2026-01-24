@@ -9,9 +9,16 @@ interface GlowCardProps {
   className?: string;
   glowColor?: string;
   hover?: boolean;
+  disableInlineShadow?: boolean;
 }
 
-export function GlowCard({ children, className, glowColor = "rgba(168, 85, 247, 0.4)", hover = true }: GlowCardProps) {
+export function GlowCard({
+  children,
+  className,
+  glowColor = "rgba(168, 85, 247, 0.4)",
+  hover = true,
+  disableInlineShadow = false,
+}: GlowCardProps) {
   return (
     <motion.div
       className={cn(
@@ -24,11 +31,15 @@ export function GlowCard({ children, className, glowColor = "rgba(168, 85, 247, 
       )}
       whileHover={hover ? { y: -5, scale: 1.02 } : {}}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      style={{
-        boxShadow: hover
-          ? `0 10px 40px -10px ${glowColor}`
-          : `0 4px 20px -4px ${glowColor}`,
-      }}
+      style={
+        disableInlineShadow
+          ? undefined
+          : {
+              boxShadow: hover
+                ? `0 10px 40px -10px ${glowColor}`
+                : `0 4px 20px -4px ${glowColor}`,
+            }
+      }
     >
       {/* Gradient border effect */}
       <div 
