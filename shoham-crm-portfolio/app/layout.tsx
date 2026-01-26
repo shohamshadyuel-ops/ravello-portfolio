@@ -28,6 +28,23 @@ export default function RootLayout({
 }) {
   return (
     <html className="dark">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `function initApollo(){
+  var n=Math.random().toString(36).substring(7),
+  o=document.createElement("script");
+  o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,
+  o.async=!0,o.defer=!0,
+  o.onload=function(){
+    window.trackingFunctions.onLoad({appId:"69723fa16ad353001daa32ef"})
+  },
+  document.head.appendChild(o)
+}
+initApollo();`,
+          }}
+        />
+      </head>
       <body className={inter.className}>
         {children}
       </body>
