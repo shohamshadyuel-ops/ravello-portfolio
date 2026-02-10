@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useParams } from "next/navigation";
 import { motion } from "framer-motion";
@@ -30,8 +31,16 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href={`/${locale}`} className="text-xl font-bold">
-            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+          <Link href={`/${locale}`} className="inline-flex items-center gap-3 min-w-0">
+            <Image
+              src="/ravello-logo.png"
+              alt="Ravello Studio"
+              width={44}
+              height={44}
+              priority
+              className="w-[36px] sm:w-[40px] lg:w-[44px] h-auto select-none pointer-events-none shrink-0"
+            />
+            <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent truncate">
               Ravello Studio
             </span>
           </Link>
