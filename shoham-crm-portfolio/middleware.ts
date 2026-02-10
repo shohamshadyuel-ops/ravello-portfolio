@@ -7,6 +7,14 @@ const defaultLocale = "en";
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // Skip redirects for public files like /logo.png, /robots.txt, /sitemap.xml, etc.
+  // Without this, locale redirects can break direct asset loads (e.g. /logo.png -> /en/logo.png).
+  const lastSegment = pathname.split("/").pop() ?? "";
+  const isPublicFile = lastSegment.includes(".");
+  if (isPublicFile) {
+    return NextResponse.next();
+  }
+
   // Check if pathname already has a locale
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`

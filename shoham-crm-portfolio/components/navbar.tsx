@@ -33,12 +33,12 @@ export function Navbar() {
           {/* Logo */}
           <Link href={`/${locale}`} className="inline-flex items-center gap-3 min-w-0">
             <Image
-              src="/ravello-logo.png"
+              src="/logo.png"
               alt="Ravello Studio"
               width={44}
               height={44}
               priority
-              className="w-[36px] sm:w-[40px] lg:w-[44px] h-auto select-none pointer-events-none shrink-0"
+              className="h-9 w-9 sm:h-11 sm:w-11 object-contain select-none pointer-events-none shrink-0"
             />
             <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent truncate">
               Ravello Studio
