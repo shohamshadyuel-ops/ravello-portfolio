@@ -59,7 +59,7 @@ export default function AboutPage() {
             About Ravello Studio
           </h1>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-            Building custom CRM systems that actually work for your business
+            Building custom CRM platforms that actually work for your business
           </p>
         </motion.div>
 
@@ -73,10 +73,10 @@ export default function AboutPage() {
           <GlowCard>
             <div className="space-y-4 text-zinc-300 leading-relaxed">
               <p>
-                Ravello Studio is a boutique team focused on crafting custom CRM systems fully aligned with your workflows and operations.
+                Ravello Studio is a boutique team focused on crafting custom CRM platforms fully aligned with your workflows and operations.
               </p>
               <p>
-                We don't believe in one-size-fits-all software. Every business has unique processes, so we design and build CRM systems from the ground up—tailored to your exact workflow, integrated with your existing tools, and ready to scale with your growth.
+                We don't believe in one-size-fits-all software. Every business has unique processes, so we design and build CRM platforms from the ground up—tailored to your exact workflow, integrated with your existing tools, and ready to scale with your growth.
               </p>
               <p>
                 From real estate agencies to e-commerce operations, healthcare clinics to logistics companies, we've helped businesses streamline operations with automation-first, design-led platforms. Our approach blends technical depth with business insight, ensuring every feature delivers measurable value.

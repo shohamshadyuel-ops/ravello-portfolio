@@ -97,7 +97,7 @@ export default function PricingPage() {
             Transparent Pricing
           </h1>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-            Custom CRM systems built to fit your needs and budget. No hidden fees, no per-user charges.
+            Custom CRM platforms built to fit your needs and budget. No hidden fees, no per-user charges.
           </p>
         </motion.div>
 

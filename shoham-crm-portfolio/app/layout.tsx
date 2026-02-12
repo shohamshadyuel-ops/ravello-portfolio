@@ -5,19 +5,19 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ravello Studio - Custom CRM Systems Developer",
+  title: "Ravello Studio - Architect your growth",
   description:
-    "Ravello Studio builds custom CRM systems for your business workflow. Fully tailored platforms with automation and integrations.",
+    "Ravello Studio builds custom CRM platforms for your business workflow. Fully tailored platforms with automation and integrations.",
   keywords: ["CRM", "Custom Software", "Business Automation", "Workflow Management", "Integrations"],
   authors: [{ name: "Ravello Studio" }],
   openGraph: {
-    title: "Ravello Studio - Custom CRM Systems Developer",
-    description: "Custom CRM systems built for your business workflow",
+    title: "Ravello Studio - Architect your growth",
+    description: "Custom CRM platforms built for your business workflow",
     type: "website",
   },
   twitter: {
-    title: "Ravello Studio - Custom CRM Systems Developer",
-    description: "Custom CRM systems built for your business workflow",
+    title: "Ravello Studio - Architect your growth",
+    description: "Custom CRM platforms built for your business workflow",
   },
 };
 

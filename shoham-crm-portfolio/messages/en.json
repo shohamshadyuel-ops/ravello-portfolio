@@ -9,7 +9,7 @@
   },
   "home": {
     "title": "Architect your growth",
-    "subtitle": "Custom CRM systems engineered around your exact workflow — owned entirely by you.",
+    "subtitle": "Custom CRM platforms engineered around your exact workflow — owned entirely by you.",
     "ctaQuote": "Request a Quote",
     "ctaWork": "View Work",
     "stats": {
@@ -132,17 +132,17 @@
   "work": {
     "title": "Project",
     "portfolio": "Portfolio",
-    "subtitle": "Custom CRM systems we've built for businesses across different industries",
+    "subtitle": "Custom CRM platforms we've built for businesses across different industries",
     "noProjects": "No projects found for this filter.",
     "all": "All"
   },
   "about": {
     "title": "About",
     "studio": "Ravello Studio",
-    "subtitle": "Custom CRM systems. Workflow-driven. Business-focused.",
+    "subtitle": "Custom CRM platforms. Workflow-driven. Business-focused.",
     "bio": {
-      "p1": "specializes in building custom CRM systems—fully tailored platforms that transform how businesses manage workflows, automate processes, and drive growth.",
-      "p2": "We don't believe in one-size-fits-all solutions. Every business has unique processes, and your software should reflect that. That's why we build fully custom CRM systems from the ground up—tailored to your exact workflow, integrated with your existing tools, and designed to scale with your growth.",
+      "p1": "specializes in building custom CRM platforms—fully tailored systems that transform how businesses manage workflows, automate processes, and drive growth.",
+      "p2": "We don't believe in one-size-fits-all solutions. Every business has unique processes, and your software should reflect that. That's why we build fully custom CRM platforms from the ground up—tailored to your exact workflow, integrated with your existing tools, and designed to scale with your growth.",
       "p3": "From real estate agencies to e-commerce operations, healthcare clinics to logistics companies, we've helped businesses across industries streamline their operations with custom-built systems. Our approach combines technical expertise with a deep understanding of business operations, ensuring that every feature adds real value and drives measurable outcomes.",
       "p4": "We deliver fast—from simple setups in 3 days to complex enterprise systems in 4 weeks. Every system features clean, luxury UI design, intelligent automations, seamless integrations, and workflow-driven architecture that puts your business processes first."
     },

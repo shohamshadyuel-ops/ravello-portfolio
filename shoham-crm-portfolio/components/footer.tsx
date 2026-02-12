@@ -38,7 +38,7 @@ export function Footer() {
               Ravello Studio
             </h3>
             <p className="mt-2 text-sm text-zinc-400">
-              Custom CRM Systems Developer
+              Custom systems for growth
             </p>
             <p className="mt-1 text-sm text-zinc-500">
               Building tailored solutions for businesses

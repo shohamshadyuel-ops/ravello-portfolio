@@ -28,7 +28,7 @@ export default function WorkPage() {
             Project Portfolio
           </h1>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-            Custom CRM systems I've built for businesses across different industries
+            Custom CRM platforms I've built for businesses across different industries
           </p>
         </motion.div>
 

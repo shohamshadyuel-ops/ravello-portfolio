@@ -17,6 +17,7 @@ export function Navbar() {
   const locale = (params?.locale as Locale) || "en";
   const { t } = useLocale();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showLogo, setShowLogo] = useState(true);
 
   const navigation = [
     { name: t("nav.home"), href: "/" },
@@ -32,14 +33,17 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center gap-2 min-w-0">
-            <Image
-              src="/logo.png"
-              alt="Ravello Studio"
-              width={28}
-              height={28}
-              priority
-              className="h-7 w-7 object-contain select-none pointer-events-none shrink-0"
-            />
+            {showLogo ? (
+              <Image
+                src="/logo.png"
+                alt="Ravello Studio"
+                width={28}
+                height={28}
+                priority
+                className="h-7 w-7 object-contain select-none pointer-events-none shrink-0"
+                onError={() => setShowLogo(false)}
+              />
+            ) : null}
             <span className="text-sm font-semibold tracking-tight text-white/90 whitespace-nowrap">
               Ravello Studio
             </span>
