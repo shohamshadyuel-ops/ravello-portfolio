@@ -31,16 +31,16 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href={`/${locale}`} className="inline-flex items-center gap-3 min-w-0">
+          <Link href={`/${locale}`} className="flex items-center gap-2 min-w-0">
             <Image
               src="/logo.png"
               alt="Ravello Studio"
-              width={44}
-              height={44}
+              width={28}
+              height={28}
               priority
-              className="h-9 w-9 sm:h-11 sm:w-11 object-contain select-none pointer-events-none shrink-0"
+              className="h-7 w-7 object-contain select-none pointer-events-none shrink-0"
             />
-            <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent truncate">
+            <span className="text-sm font-semibold tracking-tight text-white/90 whitespace-nowrap">
               Ravello Studio
             </span>
           </Link>
