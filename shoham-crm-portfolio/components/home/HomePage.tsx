@@ -15,6 +15,7 @@ import {
   Settings,
   Lock,
   ArrowRight,
+  ArrowUpRight,
   CheckCircle,
   Mail,
 } from "lucide-react";
@@ -57,90 +58,101 @@ export default function HomePage() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-        <div className="relative z-10 max-w-6xl mx-auto text-center w-full">
+      <section className="relative overflow-hidden px-4 pb-14 pt-10 sm:pb-20 sm:pt-16">
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(circle at 20% 20%, rgba(64,14,47,0.18) 0%, transparent 55%), radial-gradient(circle at 80% 30%, rgba(196,168,130,0.10) 0%, transparent 50%)",
+          }}
+        />
+
+        <div className="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          {/* Visual */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
+            className="order-2 lg:order-1"
           >
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-heading font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight px-2">
-              {t("home.title")}
+            <div className="relative mx-auto w-full max-w-[420px] sm:max-w-[520px] lg:max-w-[720px]">
+              <div className="relative w-full h-[42vh] max-h-[420px] sm:h-[50vh] sm:max-h-[520px] lg:h-[560px]">
+                <div
+                  className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
+                  style={{
+                    width: "clamp(320px, 82vw, 520px)",
+                    height: "clamp(220px, 54vw, 340px)",
+                    background:
+                      "radial-gradient(circle at 50% 50%, rgba(64,14,47,0.28) 0%, rgba(196,168,130,0.10) 25%, transparent 65%)",
+                  }}
+                />
+                <div
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
+                  style={{
+                    width: "clamp(280px, 72vw, 420px)",
+                    height: "clamp(160px, 42vw, 240px)",
+                    background:
+                      "linear-gradient(135deg, rgba(90,24,67,0.85) 0%, rgba(64,14,47,0.9) 45%, rgba(26,26,26,0.85) 100%)",
+                    boxShadow:
+                      "0 30px 80px rgba(64,14,47,0.35), 0 2px 0 rgba(255,255,255,0.05) inset, 0 -18px 40px rgba(0,0,0,0.55) inset",
+                  }}
+                />
+                <div
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
+                  style={{
+                    width: "clamp(120px, 30vw, 180px)",
+                    height: "clamp(120px, 30vw, 180px)",
+                    background:
+                      "radial-gradient(circle at 30% 30%, #0a0a0a 0%, #0f0f0f 55%, #050505 100%)",
+                    boxShadow:
+                      "0 20px 50px rgba(0,0,0,0.7), 0 2px 0 rgba(255,255,255,0.05) inset",
+                  }}
+                />
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <div className="grid h-12 w-12 sm:h-14 sm:w-14 place-items-center rounded-full border border-border/80 bg-white/5 backdrop-blur">
+                    <ArrowUpRight className="h-5 w-5 sm:h-6 sm:w-6 text-white/90" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Copy */}
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.08 }}
+            className="order-1 lg:order-2"
+          >
+            <div className="mb-4 text-xs tracking-[0.18em] uppercase text-white/60">
+              Growth-stage companies, SaaS, agencies
+            </div>
+
+            <h1 className="font-heading text-white text-[clamp(3.1rem,7vw,6.8rem)] leading-[0.98] tracking-tight">
+              <span className="block">Architect</span>
+              <span className="block">your growth</span>
             </h1>
-          </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-zinc-300 mb-10 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4"
-          >
-            {t("home.subtitle")}
-          </motion.p>
+            <div className="mt-8 grid gap-6 text-[15px] leading-relaxed text-white/70 sm:grid-cols-2">
+              <p>
+                We build the operational backbone that turns growing companies into scalable businesses.
+              </p>
+              <p>{t("home.subtitle")}</p>
+            </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-16 sm:mb-20 px-4"
-          >
-            <Link href={`/${locale}/contact`}>
-              <NeonButton size="lg" variant="primary">
-                <Mail size={20} />
-                {t("home.ctaQuote")}
-              </NeonButton>
-            </Link>
-            <Link href={`/${locale}/work`}>
-              <NeonButton size="lg" variant="outline">
-                {t("home.ctaWork")}
-                <ArrowRight size={20} />
-              </NeonButton>
-            </Link>
-          </motion.div>
-
-          {/* Stats Row */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-5 md:gap-6 max-w-4xl mx-auto w-full px-4"
-          >
-            <GlowCard
-              hover={false}
-              disableInlineShadow
-              className="p-5 md:p-6 min-h-[110px] flex flex-col items-center justify-center text-center shadow-[0_0_20px_rgba(168,85,247,0.18)] hover:shadow-[0_0_28px_rgba(168,85,247,0.22)] transition-shadow duration-200"
-            >
-              <div className="text-xl md:text-2xl font-heading font-semibold text-white mb-1">
-                {t("home.stats.deliveryTimeValue")}
-              </div>
-              <div className="text-xs md:text-sm uppercase tracking-normal text-white/60 font-medium">
-                {t("home.stats.deliveryTime")}
-              </div>
-            </GlowCard>
-
-            <GlowCard
-              hover={false}
-              disableInlineShadow
-              className="p-5 md:p-6 min-h-[110px] flex flex-col items-center justify-center text-center shadow-[0_0_20px_rgba(168,85,247,0.18)] hover:shadow-[0_0_28px_rgba(168,85,247,0.22)] transition-shadow duration-200"
-            >
-              <div className="text-xl md:text-2xl font-heading font-semibold text-white mb-1">100%</div>
-              <div className="text-xs md:text-sm uppercase tracking-normal text-white/60 font-medium">
-                {t("home.stats.customBuilt")}
-              </div>
-            </GlowCard>
-
-            <GlowCard
-              hover={false}
-              disableInlineShadow
-              className="p-5 md:p-6 min-h-[110px] flex flex-col items-center justify-center text-center shadow-[0_0_20px_rgba(168,85,247,0.18)] hover:shadow-[0_0_28px_rgba(168,85,247,0.22)] transition-shadow duration-200"
-            >
-              <div className="text-xl md:text-2xl font-heading font-semibold text-white mb-1">
-                {t("home.stats.premiumBuild")}
-              </div>
-              <div className="text-xs md:text-sm uppercase tracking-normal text-white/60 font-medium">
-                {t("home.stats.crafted")}
-              </div>
-            </GlowCard>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <Link href={`/${locale}/contact`}>
+                <NeonButton size="lg" variant="primary">
+                  {t("home.ctaQuote")}
+                  <ArrowUpRight size={18} />
+                </NeonButton>
+              </Link>
+              <Link href={`/${locale}/work`}>
+                <NeonButton size="lg" variant="outline">
+                  {t("home.ctaWork")}
+                </NeonButton>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
